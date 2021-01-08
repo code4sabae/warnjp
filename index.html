@@ -1,0 +1,171 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no"/>
+<title>WARN Japan 気象警報ダッシュボード - 気象庁発表データ</title>
+<link rel="apple-touch-icon" href="warnjp.png">
+<meta property="og:image" content="warnjp.png">
+<script type="module">
+
+import { CSV } from "https://code4sabae.github.io/js/CSV.js";
+import tabularmaps from "https://www.stopcovid19.jp/tabularmapsjapan.mjs";
+
+const makeData = (data) => {
+	const res = [];
+	let bkp = null;
+	let nwarn = 0;
+	let nnotice = 0;
+	let dt = 0;
+	let url = null;
+	const push = () => {
+		res.push({ pref: bkp, nwarn, nnotice, lastUpdate: dt, url });
+	};
+	for (const d of data) {
+		const p = d.pref;
+		if (bkp != p) {
+			if (bkp) {
+				push();
+				nwarn = nnotice = dt = 0;
+			}
+		}
+		for (let n in d) {
+			if (d[n] == 1) {
+				if (n.indexOf("警報") >= 0) {
+					nwarn++;
+				} else if (n.indexOf("注意報") >= 0) {
+					nnotice++;
+				}
+			}
+		}
+		let date = new Date(d.lastUpdate).getTime();
+		if (date > dt) {
+			dt = date;
+		}
+		bkp = p;
+		url = d.url;
+	}
+	push();
+	return res;
+};
+const makeDataSum = (data) => {
+	const sum = { nwarn: 0, nnotice: 0, lastUpdate: 0 };
+	for (const d of data) {
+		sum.nwarn += d.nwarn;
+		sum.nnotice += d.nnotice;
+		if (sum.lastUpdate < d.lastUpdate) {
+			sum.lastUpdate = d.lastUpdate;
+		}
+	}
+	return sum;
+};
+window.onload = async () => {
+	const url = "https://code4sabae.github.io/warnjp/data/latest.csv";
+	const src = CSV.toJSON(await CSV.fetch(url));
+	console.log(src);
+	const data = makeData(src);
+	console.log(data);
+	const sum = makeDataSum(data);
+	console.log(sum);
+
+	lastUpdate.textContent = "更新日: " + new Date(sum.lastUpdate);
+	
+	const show = () => {
+		const colorTabularMaps = (pname, tmap) => {
+			for (const c of tmap.children) {
+				const cname = c.cellname;
+				if (cname !== "-") {
+					const p = data.find(a => a.pref === cname);
+					const col = p.nwarn > 0 ? "#f00" : (p.nnotice > 0 ? "#ff0" : "white");
+					c.style.backgroundColor = col;
+					c.style.color = "black";
+				}
+			}
+		};
+		const setCellContent = (c, pname, cname) => {
+			c.textContent = "";
+			const cr = tag => document.createElement(tag);
+			const div = cr("div");
+			div.className = "name";
+			div.textContent = cname;
+			c.appendChild(div);
+			const div2 = cr("div");
+			div2.className = "val";
+			const p = data.find(a => a.pref === cname);
+			div2.textContent = `${p.nwarn} - ${p.nnotice}`;
+			c.appendChild(div2);
+			c.data = p;
+			c.onclick = function () {
+				window.open(this.data.url, "_blank")
+			};
+		};
+		tabularmaps.showJapan(setCellContent, colorTabularMaps, true);
+	}
+	show();
+};
+
+</script>
+<style>
+body {
+	font-family: sans-serif;
+	text-align: center;
+}
+h1 {
+	font-size: 3vw;
+	margin-top: 2vw;
+}
+/* tabularmaps */
+#tmapc span {
+	font-size: 2.0vmax;
+	align-items: center;
+	justify-content: center;
+	border-radius: .5vmax;
+	border: .1vmax solid #333;
+	padding: .2vmax .2vmax;
+	margin: .2vmax;
+}
+/* other */
+#sel {
+	font-size: 130%;
+	margin: .3em;
+}
+#banner {
+	width: 80vw;
+	margin-top: 1vw;
+}
+/* credit */
+.credit {
+	margin: 20px;
+	text-align: center;
+	font-size: 80%;
+}
+a {
+	color: #666 !important;
+}
+/* PR */
+#pr {
+	display: block;
+	margin: .8em;
+	padding: .5em;
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>WARN Japan 気象警報ダッシュボード</h1>
+
+<div id="tmapc"></div>
+<div id=lastUpdate></div>
+
+<a id="pr" href="https://jig.jp/topics/202012252000/">[PR] プログラミング好き高専生へ「jigインターン」参加者募集中</a>
+
+<a href="https://www.stopcovid19.jp/"><img id="banner" src="https://www.stopcovid19.jp/img/stopcovid19_banner.png"><br>
+毎日更新「COVID-19 新型コロナウイルス対策ダッシュボード」もどうぞ</a>
+	
+<div class="credit">
+DATA: <a href="https://www.jma.go.jp/jp/warn/">気象庁 Japan Meteorological Agency - 防災情報</a> → <a href=https://code4sabae.github.io/warnjp/data/latest.csv>CSV</a><br>
+LAYOUT: <a href="https://code4fukui.github.io/localgovjp/localgovjp-utf8.csv">TabularMaps Japan - 日本カラム地図 CSV</a> CC0 <a href=https://github.com/tabularmaps/hq>カラム地図 / TabularMaps on Github</a><br>
+APP: CC BY <a href="https://fukuno.jig.jp/3088">@taisukef 福野泰介の一日一創</a><br>
+</div>
+
+</body>
+</html>

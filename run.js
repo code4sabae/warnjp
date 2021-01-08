@@ -4,16 +4,15 @@ import { downloadPref } from "./downloadPref.js";
 import { parsePrefAll } from "./parsePref.js";
 import { getDateByHour } from "./getDateByHour.js";
 
-//await downloadIndex();
-//await parseIndex();
-//await downloadPref();
-
 let bkdt = null;
 const update = async () => {
     const nowdt = getDateByHour();
     console.log(nowdt, bkdt);
     if (nowdt != bkdt) {
         try {
+            await Deno.mkdir("temp/csv", { recursive: true });
+            await downloadIndex();
+            await parseIndex();
             await downloadPref();
             await parsePrefAll();
             console.log("updated!", nowdt);
@@ -23,5 +22,5 @@ const update = async () => {
         }
     }
 };
-await update();
 setInterval(update, 1000 * 60 * 10); // 10min
+//await update();
