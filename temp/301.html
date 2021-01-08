@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="気象庁 Japan Meteorological Agency">
+<meta name="keywords" content="気象庁 Japan Meteorological Agency">
+<title>気象庁 ｜ 気象警報・注意報</title>
+<style type="text/css" media="all"><!-- @import url(../common/default.css); --></style>
+<style type="text/css" media="all"><!-- @import url(../common/weather_info_v2.css); --></style>
+<style type="text/css" media="all"><!--@import url(./css/warn.css); --></style>
+<link rel="stylesheet" media="print" type="text/css" href="../common/print.css">
+<script src="../common/weather_info.js" type="text/javascript"></script>
+<script src="../common/contents_walker.js" type="text/javascript"></script>
+<script src="../common/contents_list.js" type="text/javascript"></script>
+<script language="javascript">
+function init() {
+    // その他の情報リストボックスにコンテンツリストを表示する。
+    showOtherInfoList();
+}
+function goNextArea(value){
+    if (value != "") {
+        document.location.href = value + ".html";
+    }
+}
+function goNextFuken(value){
+    if (value != "") {
+        document.location.href = value + ".html";
+    }
+}
+function gotoCity(value){
+    if (value != "") {
+        document.location.href = "f_" + value.substring(0, value.length - 2) + "00.html";
+    }
+}
+</script>
+<script type="text/javascript" src="../common/jquery.js"></script>
+<script type="text/javascript">
+if (((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || (navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0) || navigator.userAgent.indexOf('BlackBerry') > 0 || navigator.userAgent.indexOf('Windows Phone') > 0 || navigator.userAgent.indexOf('Windows CE') > 0)) {
+	document.write("<meta name=\"viewport\" content=\"width=680,initial-scale=0.47; user-scale=yes\">");
+}
+</script>
+<script type="text/javascript">
+if (((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || (navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0) || navigator.userAgent.indexOf('BlackBerry') > 0 || navigator.userAgent.indexOf('Windows Phone') > 0 || navigator.userAgent.indexOf('Windows CE') > 0)) {
+	document.write("<link rel=\"stylesheet\" href=\"../common/sph.css\">");
+	document.write("<script type=\"text/javascript\" src=\"../common/sph.js\"></scr"+"ipt>");
+}
+</script>
+</head>
+
+<body onLoad="init();">
+<noscript><div>すべての機能をご利用いただくにはJavascriptを有効にしてください。</div></noscript>
+<a name="top"></a>
+<div id="top">
+<!-- global menu -->
+<div id="logo">
+<a href="/"><img src="/jp/common/logo.gif" alt="気象庁 Japan Meteorological Agency" height="47" width="120"></a></div>
+<div id="header_right">
+<div id="header_link">
+<ul>
+<li id="toMain"><a href="#main">本文へ</a></li>
+<li xml:lang="en" lang="en"><a href="/jma/indexe.html">ENGLISH</a></li>
+<li><a href="/jma/kishou/info/goiken.html">ご意見･ご感想</a></li>
+<li id="siteMap"><a href="/jma/kishou/sitemap.html">サイトマップ</a></li>
+</ul>
+</div>
+<!-- search -->
+
+<div id="gsearch">
+    <!--        <p>キーワードを入力し検索ボタンを押下ください。</p> -->
+    <form id="cse-search-box" action="//google.com/cse">
+        <!--<img src="loupe.png" alt="" /> -->
+        <input type="hidden" name="cx" value="009950868052057056798:0yrbmp7chwi" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input id="gsearch-text" type="text" name="q" />
+        <input id="gsearch-btn" type="image" name="sa" src="/jp/common/btn_search6.png" alt="検索"/>
+    </form><!-- cse-search-box -->
+    <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+</div><!-- gsearch -->
+
+<!-- <div id="yjsearch" class="watermark">
+<p>キーワードを入力し検索ボタンを押下ください。</p>
+<form action="/jma/menu/search.html" method="get" id="srch">
+<input type="search" results="5" name="p" id="srchInput" />
+<input type="image" src="/jp/common/btn_search.gif" alt="検索" id="srchBtn" onclick="document.getElementById('srchInput').focus();" />
+<input type="hidden" id="fr" name="fr" value="cse" />
+<input type="hidden" id="ei" name="ei" value="utf-8" />
+<input type="hidden" id="csid" name="csid" value="pD.LqPJKNL6pX5S8V0Zj684fKOuX.849vg9h" />
+<input type="hidden" name="vs" value="www.jma.go.jp" id="yjInsite" />
+</form>
+<img src="//custom.search.yahoo.co.jp/images/window/pD.LqPJKNL6pX5S8V0Zj684fKOuX.849vg9h.gif" alt="" /> </div>
+<script type="text/javascript">
+					(function() {
+					var sb = document.getElementById('yjsearch');
+					if (sb && sb.className == 'watermark') {
+						var si = document.getElementById('srchInput');
+						var f = function() { si.className = 'nomark'; };
+						var b = function() {
+							if (si.value == '') {
+								si.className = '';
+							}
+						};
+						si.onfocus = f;
+						si.onblur = b;
+						if (!/[&?]p=[^&]/.test(location.search)) {
+							b();
+						} else {
+							f();
+						}
+					}
+					})();
+</script> -->
+<!-- search --> 
+</div>
+<table id="global" cellspacing="0" cellpadding="0">
+<tr>
+<td class="side"><a href="/">
+<div>ホーム</div>
+</a></td>
+<td class="side"><a href="/jma/menu/menuflash.html">
+<div class="here">防災情報</div>
+</a></td>
+<td class="side"><a href="/jma/menu/menureport.html">
+<div>各種データ・資料</div>
+</a></td>
+<td class="side"><a href="/jma/menu/menuknowledge.html">
+<div>知識・解説</div>
+</a></td>
+<td class="side"><a href="/jma/menu/menuabout.html">
+<div>気象庁について</div>
+</a></td>
+<td><a href="/jma/menu/menulinks.html">
+<div>案内・申請</div>
+</a></td>
+</tr>
+</table>
+<!-- 広告掲載用 start -->
+<div style="width:728px; text-align:right; font-size:14px; margin-top:5px;" class='jma_ad_space'>[広告]</div>
+<div id='jma_ad_728x90' style='width: 728px; height: 90px; text-align:left; margin: 0 0 5px 0; clear:both;' class='jma_ad_space'></div>
+<!-- 広告掲載用 end -->
+<div id="nesting">
+<a href="/">ホーム</a> &gt; <a href="../../jma/menu/menuflash.html">防災情報</a> &gt; 気象警報・注意報
+</div>
+</div>
+<!-- ***************** コンテンツ表示基底部 ****************************** -->
+<div id="base">
+<div id="sidebar">
+<!-- サブメニュー部 -->
+<div id="submenu" class="sidemenu">
+<!-- 広告掲載用 start -->
+<div style="width:300px; font-size:14px; text-align:right" class='jma_ad_space'>[広告]</div>
+<div id='jma_ad_300x250' style='width: 300px; height: 250px; margin-bottom: 8px;' class='jma_ad_space'></div>
+<div style="width:300px" class='jma_ad_space'><ul class="pagelink"><li><a href="//www.jma.go.jp/jma/kishou/info/coment.html#ad_policy">広告掲載について</a></li></ul></div>
+<!-- 広告掲載用 end -->
+<table border="0" cellspacing="0" cellpadding="0">
+<ul>
+<tr>
+<td colspan="2">再読込ボタンかブラウザの更新ボタンをクリックして最新の情報をお使いください。</td>
+</tr>
+<tr>
+<td colspan="2"><img width="100%" height="2px" src="/jp/common/line_menu.gif" alt=""></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/warn/">気象警報・注意報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;大雨・洪水警報の危険度分布</li></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;&nbsp;&nbsp;<a href="/jp/doshamesh/">土砂災害</a> / <a href="/jp/suigaimesh/inund.html">浸水害</a> / <a href="/jp/suigaimesh/flood.html">洪水</a></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/kishojoho/">気象情報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;海上警報&nbsp;<a href="/jp/seawarn/">気象</a> / <a href="/jp/kaijyo/">火山</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/typh/">台風情報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/flood/">指定河川洪水予報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/dosha/">土砂災害警戒情報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/tatsumaki/">竜巻注意情報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/fcd/yoho/data/kouon/">高温注意情報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><img width="100%" height="2px" src="/jp/common/line_menu.gif" alt=""></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/tsunami/">大津波警報・津波警報・津波注意報、津波情報、津波予報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/quake/">地震情報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/svd/eew/data/nteq/index.html">南海トラフ地震関連情報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/volcano/">噴火警報・予報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/funkasokuho/">噴火速報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/ashfall/">降灰予報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><img width="100%" height="2px" src="/jp/common/line_menu.gif" alt=""></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/yoho/">天気予報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/fcd/yoho/wdist/jp/">天気分布予報・時系列予報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/week/">週間天気予報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/seafcst/">海上予報</a> / <a href="//www.data.jma.go.jp/fcd/yoho/umimesh/jp/">海上分布予報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/gmd/cpd/twoweek/">２週間気温予報</a></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/gmd/cpd/souten/">早期天候情報</a></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/longfcst/" target="_top">季節予報(1か月・3か月・暖候期・寒候期)</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><img width="100%" height="2px" src="/jp/common/line_menu.gif" alt=""></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/g3/">天気図</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/highresorad/">雨雲の動き（高解像度降水ナウキャスト）</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/kaikotan/">今後の雨（降水短時間予報）</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/fcd/yoho/snow/jp/">現在の雪（解析積雪深・解析降雪量）</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/radnowc/">レーダー・ナウキャスト(降水・雷・竜巻)</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/gms/">気象衛星</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/gms150jp/">気象衛星（高頻度）</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;アメダス <a href="/jp/amedas/">地図形式</a> / <a href="/jp/amedas_h/">表形式</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/kuko/">空港の気象</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/windpro/">ウィンドプロファイラ（上空の風）</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/gmd/env/kosa/fcst/">黄砂情報</a></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/gmd/env/uvindex/">紫外線情報</a></td>
+</tr>
+<tr>
+<td colspan="2"><img width="100%" height="2px" src="/jp/common/line_menu.gif" alt=""></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/choi/">潮位観測情報</a></li></td>
+</tr>
+<tr>
+<td colspan="2"><li>&nbsp;<a href="/jp/wave/">波浪観測情報</a></li></td>
+</tr>
+</ul>
+</table>
+</div>
+</div>
+<!-- 情報表示部 -->
+<div id="warn_main"><!-- start warn_main div -->
+<div id="main">
+				        <img src="/jma/trouble/trouble.png" alt="" />
+<!-- タイトル -->
+<div id="title">
+<table>
+<tr>
+<td class="titleText">
+<h1>気象警報・注意報 : 宗谷地方</h1>
+</td>
+<td class="titleOthers">
+<div id="others" class="select">
+<table>
+<tr>
+<td>その他の情報</td>
+<td>
+<input id="myContentsId" type="hidden" value="c02">
+<input id="myAreaCode" type="hidden" value="301">
+<select size="1" id="otherInfoList" onChange="jumpOtherInfo()"></select>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="print">
+<input type="button" title="このページを印刷します。" value="印刷" onclick="print();">
+</div>
+<div id="area" class="select">
+<table>
+<tbody>
+<tr>
+<td style="white-space: nowrap;">地方</td>
+<td>
+<select id="areaSelect" size="1" onChange=javascript:goNextArea(this.options[this.selectedIndex].value)>
+<option selected></option>
+<option value="000">全国</option><option value="201">北海道地方（北西部）</option><option value="202">北海道地方（東部）</option><option value="203">北海道地方（南西部）</option><option value="204">東北地方（北部）</option><option value="205">東北地方（南部）</option><option value="206">関東地方</option><option value="207">甲信地方</option><option value="208">北陸地方（東部）</option><option value="209">北陸地方（西部）</option><option value="210">東海地方</option><option value="211">近畿地方</option><option value="212">中国地方</option><option value="213">四国地方</option><option value="214">九州地方（北部）</option><option value="215">九州地方（南部）</option><option value="216">奄美地方</option><option value="217">沖縄・大東島地方</option><option value="219">宮古・八重山地方</option></select>
+</td>
+<td style="white-space: nowrap;">府県</td>
+<td>
+<select size="1" onChange=javascript:goNextFuken(this.options[this.selectedIndex].value)>
+<option value="301" selected >宗谷地方</option><option value="302">上川・留萌地方</option><option value="303">網走・北見・紋別地方</option><option value="304">釧路・根室・十勝地方</option><option value="305">胆振・日高地方</option><option value="306">石狩・空知・後志地方</option><option value="307">渡島・檜山地方</option><option value="308">青森県</option><option value="309">秋田県</option><option value="310">岩手県</option><option value="311">山形県</option><option value="312">宮城県</option><option value="313">福島県</option><option value="314">茨城県</option><option value="315">群馬県</option><option value="316">栃木県</option><option value="317">埼玉県</option><option value="318">千葉県</option><option value="319">東京都</option><option value="320">神奈川県</option><option value="321">山梨県</option><option value="322">長野県</option><option value="323">新潟県</option><option value="324">富山県</option><option value="325">石川県</option><option value="326">福井県</option><option value="327">静岡県</option><option value="328">岐阜県</option><option value="329">愛知県</option><option value="330">三重県</option><option value="331">大阪府</option><option value="332">兵庫県</option><option value="333">京都府</option><option value="334">滋賀県</option><option value="335">奈良県</option><option value="336">和歌山県</option><option value="337">島根県</option><option value="338">広島県</option><option value="339">鳥取県</option><option value="340">岡山県</option><option value="345">山口県</option><option value="341">香川県</option><option value="342">愛媛県</option><option value="343">徳島県</option><option value="344">高知県</option><option value="346">福岡県</option><option value="347">佐賀県</option><option value="348">長崎県</option><option value="349">熊本県</option><option value="350">大分県</option><option value="351">宮崎県</option><option value="352">鹿児島県</option><option value="353">沖縄本島地方</option><option value="354">大東島地方</option><option value="355">宮古島地方</option><option value="356">八重山地方</option></select>
+</td>
+<td style="white-space: nowrap;">市町村</td>
+<td>
+<select size="1" onChange=javascript:gotoCity(this.options[this.selectedIndex].value)>
+<option selected></option>
+<option value="">あ行</option><option value="0151400">　枝幸町</option><option value="">さ行</option><option value="0151100">　猿払村</option><option value="">た行</option><option value="0151600">　豊富町</option><option value="">な行</option><option value="0151300">　中頓別町</option><option value="">は行</option><option value="0151200">　浜頓別町</option><option value="0152000">　幌延町</option><option value="">ら行</option><option value="0151800">　利尻町</option><option value="0151900">　利尻富士町</option><option value="0151700">　礼文町</option><option value="">わ行</option><option value="0121400">　稚内市</option></select>
+</td>
+</tr>
+</tbody>
+</table>
+</div><!-- end area div-->
+
+<div id="guide">
+<a href=301.html>発表状況地図</a>
+			<div id="refre"><input type="button" title="再読込" value="再読込" onclick="document.location.reload();"></div>
+</div>
+<div id="time">最新発表：令和　３年　１月　８日１６時４８分</div>
+<div id="jumpExplain" class="innerJump"><a href="#explain">説明へ</a>
+</div>
+
+<!-- emergency warnings -->
+<br>
+
+
+<table>
+<tr><td>宗谷地方では、風雪や高波、落雷、なだれ、着氷に注意してください。</td></tr>
+</table>
+<!-- emergency warnings -->
+
+<div id="info">
+<table id='WarnTableTable'><tr><th rowspan="2" colspan="3" bgcolor="#bbbbbb"><br></th><th colspan="7" bgcolor="#ff7777">警報</th><th colspan="16" bgcolor="#ffff00">注意報</th></tr><tr bgcolor="#ffff99"><th bgcolor="#ffbbbb">大<br>雨</th><th bgcolor="#ffbbbb">洪<br>水</th><th bgcolor="#ffbbbb">暴<br>風</th><th bgcolor="#ffbbbb">暴<br>風<br>雪</th><th bgcolor="#ffbbbb">大<br>雪</th><th bgcolor="#ffbbbb">波<br>浪</th><th bgcolor="#ffbbbb">高<br>潮</th><th>大<br>雨</th><th>洪<br>水</th><th>強<br>風</th><th>風<br>雪</th><th>大<br>雪</th><th>波<br>浪</th><th>高<br>潮</th><th>雷</th><th>融<br>雪</th><th>濃<br>霧</th><th>乾<br>燥</th><th>な<br>だ<br>れ</th><th>低<br>温</th><th>霜</th><th>着<br>氷</th><th>着<br>雪</th></tr><tr><td rowspan="10" bgcolor="#bbbbbb">宗谷地方</td><td rowspan="4" bgcolor="#cccccc" align="center" style="padding: 3px 5px;">宗<br>谷<br>北<br>部<br></td><td nowrap bgcolor="#dddddd"><a name="011011"></a><a href="f_0121400.html">稚内市</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td></tr><tr><td nowrap bgcolor="#dddddd"><a href="f_0151100.html">猿払村</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td></tr><tr><td nowrap bgcolor="#dddddd"><a href="f_0151600.html">豊富町</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td></tr><tr><td nowrap bgcolor="#dddddd"><a href="f_0152000.html">幌延町</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td></tr></tr><tr><td rowspan="3" bgcolor="#cccccc" align="center" style="padding: 3px 5px;">宗<br>谷<br>南<br>部<br></td><td nowrap bgcolor="#dddddd"><a name="011012"></a><a href="f_0151200.html">浜頓別町</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td></tr><tr><td nowrap bgcolor="#dddddd"><a href="f_0151300.html">中頓別町</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="il1"></td><td class="il1"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="il2"></td><td class="il2"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td></tr><tr><td nowrap bgcolor="#dddddd"><a href="f_0151400.html">枝幸町</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td></tr></tr><tr><td rowspan="3" bgcolor="#cccccc" align="center" style="padding: 3px 5px;">利<br>尻<br>・<br>礼<br>文<br></td><td nowrap bgcolor="#dddddd"><a name="011013"></a><a href="f_0151700.html">礼文町</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td></tr><tr><td nowrap bgcolor="#dddddd"><a href="f_0151800.html">利尻町</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td></tr><tr><td nowrap bgcolor="#dddddd"><a href="f_0151900.html">利尻富士町</a></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="wrn"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv">●</td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv"></td><td class="adv">●</td><td class="adv"></td></tr></tr><tr bgcolor="#ffff99"><th rowspan="1" colspan="3" bgcolor="#bbbbbb"><br></th><th bgcolor="#ffbbbb">大<br>雨</th><th bgcolor="#ffbbbb">洪<br>水</th><th bgcolor="#ffbbbb">暴<br>風</th><th bgcolor="#ffbbbb">暴<br>風<br>雪</th><th bgcolor="#ffbbbb">大<br>雪</th><th bgcolor="#ffbbbb">波<br>浪</th><th bgcolor="#ffbbbb">高<br>潮</th><th>大<br>雨</th><th>洪<br>水</th><th>強<br>風</th><th>風<br>雪</th><th>大<br>雪</th><th>波<br>浪</th><th>高<br>潮</th><th>雷</th><th>融<br>雪</th><th>濃<br>霧</th><th>乾<br>燥</th><th>な<br>だ<br>れ</th><th>低<br>温</th><th>霜</th><th>着<br>氷</th><th>着<br>雪</th></tr></table>
+</div>
+<div id="explain">
+<a name="explain"></a>
+<!-- emergency warnings -->
+※発表中の警報・注意報に●印を表示しています。<br>
+<!-- emergency warnings -->
+警報等の発表、切替、解除を行った場合、本ページは通常は数分以内に更新されますので、ページを再読込し、最新の情報をお使いください。<br>
+<br>
+※警戒レベルとの関係（大雨・洪水）<br>
+　大雨特別警報・・・【警戒レベル５相当】<br>
+　土砂災害警戒情報・・・【警戒レベル４相当】<br>
+　大雨警報（土砂災害）・洪水警報・・・【警戒レベル３相当】<br>
+　大雨注意報・洪水注意報・・・【警戒レベル２】<br>
+<br>
+※警戒レベルとの関係（高潮）<br>
+　高潮特別警報・高潮警報・・・【警戒レベル４相当】<br>
+　高潮注意報（警報に切り替える可能性が高い旨に言及されているもの*）・・・【警戒レベル３相当】<br>
+　高潮注意報（警報に切り替える可能性に言及されていないもの*）・・・【警戒レベル２】<br>
+<br>
+＊警報に切り替える可能性については、市町村ごとの警報・注意報のページで確認できます。<br>
+<br>
+　※各情報をもとにとるべき行動と、相当する警戒レベルについて<br>
+<img src='images/warn_keikaiLevel2-5.png'/><br>
+<br>
+なお、翌日までの期間の早期注意情報（警報級の可能性）を警戒レベル１情報として発表しています。市町村ごとの警報・注意報のページで確認できます。<br>
+<br>
+※警戒レベルについては<a href="http://www.bousai.go.jp/oukyu/hinankankoku/h30_hinankankoku_guideline/index.html">内閣府ホームページ</a>をご覧ください。<br>
+<br>
+※<font color="#000000"><b>各市町村名</b></font>をクリックすると各市町村の発表文に移動します。<br>
+<br>
+<ul class="pagelink">
+<li><a href="/jp/doshamesh/index.html#area=301">警報の危険度分布</a></li>
+</ul>
+<br>
+<ul class="pagelink">
+<li><a href="/jp/dosha/301_index.html">土砂災害警戒情報</a><br>
+大雨警報（土砂災害）が発表されている状況で、土砂災害発生の危険度がさらに高まったときに、市町村長の避難勧告や住民の自主避難の判断を支援するよう、対象となる市町村を特定して警戒を呼びかける情報で、都道府県と気象庁が共同で発表しています。</li>
+</ul>
+<br>
+<ul class="pagelink">
+<li><a href="/jp/kishojoho/301_index.html">気象情報（警報・注意報の補足などの情報）</a></li>
+</ul>
+<br>
+<ul class="pagelink">
+<li><a href="/jma/kishou/know/bosai/warning.html">警報・注意報について</a></li>
+</ul>
+<br>
+※警報・注意報の発表区域についてはこちらをご覧下さい。<br>
+<ul class="pagelink">
+<li><a href="/jma/kishou/know/saibun/index.html">発表区域の図 （細分図）</a>
+</ul>
+<br>
+※警報・注意報の発表基準についてはこちらをご覧下さい。<br>
+<ul class="pagelink">
+<li><a href="/jma/kishou/know/kijun/index.html">警報・注意報の発表基準</a>
+</ul>
+</div>
+<div id="gotop">
+<a href="#top">このページのトップへ</a>
+</div>
+</div><!-- end main div -->
+</div><!-- end warn_main div -->
+</div><!--end base div-->
+<div id="foot">
+<a href="/jma/kishou/info/coment.html">気象庁ホームページについて</a>
+<!-- 広告掲載用 start -->
+&nbsp;<input type="button" id="jma_ad_config_button" name="jma_ad_config_button" value="広告非表示" style="cursor:pointer">
+  <script async src="//www.jma.go.jp/jma/com/ad_js/production/jma-ad.js"></script>
+<!-- 広告掲載用 end -->
+</div>
+</body>
+</html>
