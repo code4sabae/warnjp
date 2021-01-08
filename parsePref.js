@@ -24,7 +24,9 @@ const parsePref = async (area) => {
     const id = parseInt(area.id);
     const fn = "temp/" + id + ".html";
     const d = await Deno.readTextFile(fn);
-    const root = HTMLParser.parse(d.replace(/<tr><tr>/g, "<tr>"));
+    const d2 = d.replace(/<tr><tr>/g, "<tr>");
+    const d3 = d2.replace(/<\/tr><\/tr>/g, "</tr>");
+    const root = HTMLParser.parse(d3);
     
     const lastUpdate = parseDate(root.querySelector("#time").text);
     // console.log(lastUpdate);

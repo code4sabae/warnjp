@@ -3,7 +3,7 @@ import { JAPAN_PREF, JAPAN_PREF_ISO } from "https://code4sabae.github.io/js/JAPA
 import { CSV } from "https://code4sabae.github.io/js/CSV.js";
 
 const parseIndex = async () => {
-    const fn = "data/index.html";
+    const fn = "temp/index.html";
     const d = await Deno.readTextFile(fn);
     const root = HTMLParser.parse(d);
 

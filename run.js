@@ -23,4 +23,4 @@ const update = async () => {
     }
 };
 setInterval(update, 1000 * 60 * 10); // 10min
-//await update();
+await update();
