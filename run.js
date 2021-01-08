@@ -2,11 +2,11 @@ import { downloadIndex } from "./downloadIndex.js";
 import { parseIndex } from "./parseIndex.js";
 import { downloadPref } from "./downloadPref.js";
 import { parsePrefAll } from "./parsePref.js";
-import { getDateByHour } from "./getDateByHour.js";
+import { getDateByTenMinutes } from "./getDate.js";
 
 let bkdt = null;
 const update = async () => {
-    const nowdt = getDateByHour();
+    const nowdt = getDateByTenMinutes();
     console.log(nowdt, bkdt);
     if (nowdt != bkdt) {
         try {
@@ -14,7 +14,7 @@ const update = async () => {
             await downloadIndex();
             await parseIndex();
             await downloadPref();
-            await parsePrefAll();
+            await parsePrefAll(nowdt);
             console.log("updated!", nowdt);
             bkdt = nowdt;
         } catch (e) {
@@ -22,5 +22,5 @@ const update = async () => {
         }
     }
 };
-setInterval(update, 1000 * 60 * 10); // 10min
-await update();
+setInterval(update, 1000 * 60 * 1); // 1min
+//await update();

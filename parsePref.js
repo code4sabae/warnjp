@@ -2,7 +2,6 @@ import HTMLParser from "https://dev.jspm.io/fast-html-parser";
 import { CSV } from "https://code4sabae.github.io/js/CSV.js";
 import { fix0 } from "https://code4sabae.github.io/js/fix0.js";
 import IMIMojiConverter from "https://code4sabae.github.io/imi-moji-converter-es/IMIMojiConverter.mjs";
-import { getDateByHour } from "./getDateByHour.js";
 
 const parseDate = (date) => {
     // 最新発表：令和　３年　１月　８日０７時３２分
@@ -109,7 +108,7 @@ const parsePref = async (area) => {
     await Deno.writeTextFile("temp/csv/" + id + ".csv", CSV.encode(csv));
     return csv;
 };
-const parsePrefAll = async () => {
+const parsePrefAll = async (dt) => {
     const didx = await Deno.readTextFile("temp/index.html.csv");
     const json = CSV.toJSON(CSV.decode(didx));
 
@@ -129,7 +128,6 @@ const parsePrefAll = async () => {
         csv.forEach(line => csvall.push(line));
         */
     }
-    const dt = getDateByHour();
     await Deno.writeTextFile("data/latest.csv", CSV.encode(csvall));
     const path = "data/" + dt.substring(0, 6);
     await Deno.mkdir(path, { recursive: true });
