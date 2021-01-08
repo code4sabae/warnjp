@@ -9,6 +9,7 @@ const update = async () => {
     const nowdt = getDateByTenMinutes();
     console.log(nowdt, bkdt);
     if (nowdt != bkdt) {
+        bkdt = nowdt;
         try {
             await Deno.mkdir("temp/csv", { recursive: true });
             await downloadIndex();
@@ -16,7 +17,6 @@ const update = async () => {
             await downloadPref();
             await parsePrefAll(nowdt);
             console.log("updated!", nowdt);
-            bkdt = nowdt;
         } catch (e) {
             console.log(e);
         }
