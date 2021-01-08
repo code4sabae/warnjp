@@ -11813,3 +11813,10 @@ To github.com:code4sabae/warnjp.git
 355
 356
 updated! 202101090800
+warning: CRLF will be replaced by LF in nohup.out.
+The file will have its original line endings in your working directory.
+[main 6abd2de] update data
+ 5 files changed, 2077 insertions(+), 77 deletions(-)
+ create mode 100644 data/202101/202101090800.csv
+To github.com:code4sabae/warnjp.git
+   01fd366..6abd2de  main -> main
