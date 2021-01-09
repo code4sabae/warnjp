@@ -37906,3 +37906,231 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 354
 355
 356
+warning: CRLF will be replaced by LF in nohup.out.
+The file will have its original line endings in your working directory.
+[main 3bb371f] update data
+ 2 files changed, 2005 insertions(+)
+ create mode 100644 data/202101/202101100120.csv
+To github.com:code4sabae/warnjp.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'git@github.com:code4sabae/warnjp.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+{
+  "鹿児島県": [32m"352"[39m,
+  "宮城県": [32m"312"[39m,
+  "大阪府": [32m"331"[39m,
+  "香川県": [32m"341"[39m,
+  "網走・北見・紋別地方": [32m"303"[39m,
+  "奈良県": [32m"335"[39m,
+  "滋賀県": [32m"334"[39m,
+  "群馬県": [32m"315"[39m,
+  "釧路・根室・十勝地方": [32m"304"[39m,
+  "岩手県": [32m"310"[39m,
+  "和歌山県": [32m"336"[39m,
+  "富山県": [32m"324"[39m,
+  "秋田県": [32m"309"[39m,
+  "石川県": [32m"325"[39m,
+  "高知県": [32m"344"[39m,
+  "愛媛県": [32m"342"[39m,
+  "山梨県": [32m"321"[39m,
+  "徳島県": [32m"343"[39m,
+  "石狩・空知・後志地方": [32m"306"[39m,
+  "長野県": [32m"322"[39m,
+  "山形県": [32m"311"[39m,
+  "岡山県": [32m"340"[39m,
+  "東京都": [32m"319"[39m,
+  "埼玉県": [32m"317"[39m,
+  "上川・留萌地方": [32m"302"[39m,
+  "鳥取県": [32m"339"[39m,
+  "熊本県": [32m"349"[39m,
+  "渡島・檜山地方": [32m"307"[39m,
+  "新潟県": [32m"323"[39m,
+  "胆振・日高地方": [32m"305"[39m,
+  "広島県": [32m"338"[39m,
+  "静岡県": [32m"327"[39m,
+  "福岡県": [32m"346"[39m,
+  "千葉県": [32m"318"[39m,
+  "栃木県": [32m"316"[39m,
+  "大分県": [32m"350"[39m,
+  "茨城県": [32m"314"[39m,
+  "兵庫県": [32m"332"[39m,
+  "三重県": [32m"330"[39m,
+  "宗谷地方": [32m"301"[39m,
+  "佐賀県": [32m"347"[39m,
+  "福島県": [32m"313"[39m,
+  "愛知県": [32m"329"[39m,
+  "山口県": [32m"345"[39m,
+  "宮崎県": [32m"351"[39m,
+  "島根県": [32m"337"[39m,
+  "長崎県": [32m"348"[39m,
+  "京都府": [32m"333"[39m,
+  "福井県": [32m"326"[39m,
+  "青森県": [32m"308"[39m,
+  "神奈川県": [32m"320"[39m,
+  "岐阜県": [32m"328"[39m,
+  "沖縄本島地方": [32m"353"[39m,
+  "大東島地方": [32m"354"[39m,
+  "宮古島地方": [32m"355"[39m,
+  "八重山地方": [32m"356"[39m
+}
+[
+  [ [32m"id"[39m, [32m"ISO3166-2"[39m, [32m"pref"[39m, [32m"area"[39m, [32m"url"[39m ],
+  [ [32m"301"[39m, [32m"JP-01"[39m, [32m"北海道"[39m, [32m"宗谷地方"[39m, [32m"https://www.jma.go.jp/jp/warn/301_table.html"[39m ],
+  [
+    [32m"302"[39m,
+    [32m"JP-01"[39m,
+    [32m"北海道"[39m,
+    [32m"上川・留萌地方"[39m,
+    [32m"https://www.jma.go.jp/jp/warn/302_table.html"[39m
+  ],
+  [
+    [32m"303"[39m,
+    [32m"JP-01"[39m,
+    [32m"北海道"[39m,
+    [32m"網走・北見・紋別地方"[39m,
+    [32m"https://www.jma.go.jp/jp/warn/303_table.html"[39m
+  ],
+  [
+    [32m"304"[39m,
+    [32m"JP-01"[39m,
+    [32m"北海道"[39m,
+    [32m"釧路・根室・十勝地方"[39m,
+    [32m"https://www.jma.go.jp/jp/warn/304_table.html"[39m
+  ],
+  [
+    [32m"305"[39m,
+    [32m"JP-01"[39m,
+    [32m"北海道"[39m,
+    [32m"胆振・日高地方"[39m,
+    [32m"https://www.jma.go.jp/jp/warn/305_table.html"[39m
+  ],
+  [
+    [32m"306"[39m,
+    [32m"JP-01"[39m,
+    [32m"北海道"[39m,
+    [32m"石狩・空知・後志地方"[39m,
+    [32m"https://www.jma.go.jp/jp/warn/306_table.html"[39m
+  ],
+  [
+    [32m"307"[39m,
+    [32m"JP-01"[39m,
+    [32m"北海道"[39m,
+    [32m"渡島・檜山地方"[39m,
+    [32m"https://www.jma.go.jp/jp/warn/307_table.html"[39m
+  ],
+  [ [32m"308"[39m, [32m"JP-02"[39m, [32m"青森県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/308_table.html"[39m ],
+  [ [32m"309"[39m, [32m"JP-05"[39m, [32m"秋田県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/309_table.html"[39m ],
+  [ [32m"310"[39m, [32m"JP-03"[39m, [32m"岩手県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/310_table.html"[39m ],
+  [ [32m"311"[39m, [32m"JP-06"[39m, [32m"山形県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/311_table.html"[39m ],
+  [ [32m"312"[39m, [32m"JP-04"[39m, [32m"宮城県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/312_table.html"[39m ],
+  [ [32m"313"[39m, [32m"JP-07"[39m, [32m"福島県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/313_table.html"[39m ],
+  [ [32m"314"[39m, [32m"JP-08"[39m, [32m"茨城県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/314_table.html"[39m ],
+  [ [32m"315"[39m, [32m"JP-10"[39m, [32m"群馬県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/315_table.html"[39m ],
+  [ [32m"316"[39m, [32m"JP-09"[39m, [32m"栃木県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/316_table.html"[39m ],
+  [ [32m"317"[39m, [32m"JP-11"[39m, [32m"埼玉県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/317_table.html"[39m ],
+  [ [32m"318"[39m, [32m"JP-12"[39m, [32m"千葉県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/318_table.html"[39m ],
+  [ [32m"319"[39m, [32m"JP-13"[39m, [32m"東京都"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/319_table.html"[39m ],
+  [ [32m"320"[39m, [32m"JP-14"[39m, [32m"神奈川県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/320_table.html"[39m ],
+  [ [32m"321"[39m, [32m"JP-19"[39m, [32m"山梨県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/321_table.html"[39m ],
+  [ [32m"322"[39m, [32m"JP-20"[39m, [32m"長野県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/322_table.html"[39m ],
+  [ [32m"323"[39m, [32m"JP-15"[39m, [32m"新潟県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/323_table.html"[39m ],
+  [ [32m"324"[39m, [32m"JP-16"[39m, [32m"富山県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/324_table.html"[39m ],
+  [ [32m"325"[39m, [32m"JP-17"[39m, [32m"石川県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/325_table.html"[39m ],
+  [ [32m"326"[39m, [32m"JP-18"[39m, [32m"福井県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/326_table.html"[39m ],
+  [ [32m"327"[39m, [32m"JP-22"[39m, [32m"静岡県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/327_table.html"[39m ],
+  [ [32m"328"[39m, [32m"JP-21"[39m, [32m"岐阜県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/328_table.html"[39m ],
+  [ [32m"329"[39m, [32m"JP-23"[39m, [32m"愛知県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/329_table.html"[39m ],
+  [ [32m"330"[39m, [32m"JP-24"[39m, [32m"三重県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/330_table.html"[39m ],
+  [ [32m"331"[39m, [32m"JP-27"[39m, [32m"大阪府"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/331_table.html"[39m ],
+  [ [32m"332"[39m, [32m"JP-28"[39m, [32m"兵庫県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/332_table.html"[39m ],
+  [ [32m"333"[39m, [32m"JP-26"[39m, [32m"京都府"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/333_table.html"[39m ],
+  [ [32m"334"[39m, [32m"JP-25"[39m, [32m"滋賀県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/334_table.html"[39m ],
+  [ [32m"335"[39m, [32m"JP-29"[39m, [32m"奈良県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/335_table.html"[39m ],
+  [ [32m"336"[39m, [32m"JP-30"[39m, [32m"和歌山県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/336_table.html"[39m ],
+  [ [32m"337"[39m, [32m"JP-32"[39m, [32m"島根県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/337_table.html"[39m ],
+  [ [32m"338"[39m, [32m"JP-34"[39m, [32m"広島県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/338_table.html"[39m ],
+  [ [32m"339"[39m, [32m"JP-31"[39m, [32m"鳥取県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/339_table.html"[39m ],
+  [ [32m"340"[39m, [32m"JP-33"[39m, [32m"岡山県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/340_table.html"[39m ],
+  [ [32m"341"[39m, [32m"JP-37"[39m, [32m"香川県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/341_table.html"[39m ],
+  [ [32m"342"[39m, [32m"JP-38"[39m, [32m"愛媛県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/342_table.html"[39m ],
+  [ [32m"343"[39m, [32m"JP-36"[39m, [32m"徳島県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/343_table.html"[39m ],
+  [ [32m"344"[39m, [32m"JP-39"[39m, [32m"高知県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/344_table.html"[39m ],
+  [ [32m"345"[39m, [32m"JP-35"[39m, [32m"山口県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/345_table.html"[39m ],
+  [ [32m"346"[39m, [32m"JP-40"[39m, [32m"福岡県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/346_table.html"[39m ],
+  [ [32m"347"[39m, [32m"JP-41"[39m, [32m"佐賀県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/347_table.html"[39m ],
+  [ [32m"348"[39m, [32m"JP-42"[39m, [32m"長崎県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/348_table.html"[39m ],
+  [ [32m"349"[39m, [32m"JP-43"[39m, [32m"熊本県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/349_table.html"[39m ],
+  [ [32m"350"[39m, [32m"JP-44"[39m, [32m"大分県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/350_table.html"[39m ],
+  [ [32m"351"[39m, [32m"JP-45"[39m, [32m"宮崎県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/351_table.html"[39m ],
+  [ [32m"352"[39m, [32m"JP-46"[39m, [32m"鹿児島県"[39m, [32m""[39m, [32m"https://www.jma.go.jp/jp/warn/352_table.html"[39m ],
+  [
+    [32m"353"[39m,
+    [32m"JP-47"[39m,
+    [32m"沖縄県"[39m,
+    [32m"沖縄本島地方"[39m,
+    [32m"https://www.jma.go.jp/jp/warn/353_table.html"[39m
+  ],
+  [ [32m"354"[39m, [32m"JP-47"[39m, [32m"沖縄県"[39m, [32m"大東島地方"[39m, [32m"https://www.jma.go.jp/jp/warn/354_table.html"[39m ],
+  [ [32m"355"[39m, [32m"JP-47"[39m, [32m"沖縄県"[39m, [32m"宮古島地方"[39m, [32m"https://www.jma.go.jp/jp/warn/355_table.html"[39m ],
+  [ [32m"356"[39m, [32m"JP-47"[39m, [32m"沖縄県"[39m, [32m"八重山地方"[39m, [32m"https://www.jma.go.jp/jp/warn/356_table.html"[39m ]
+]
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
