@@ -58,6 +58,10 @@ const makeDataSum = (data) => {
 	return sum;
 };
 window.onload = async () => {
+	setInterval(showPage, 1000 * 60 * 10);
+	showPage();
+};
+const showPage = async () => {
 	const url = "https://code4sabae.github.io/warnjp/data/latest.csv";
 	const src = CSV.toJSON(await CSV.fetch(url));
 	console.log(src);
@@ -67,7 +71,7 @@ window.onload = async () => {
 	console.log(sum);
 
 	lastUpdate.textContent = "更新日: " + new Date(sum.lastUpdate);
-	
+
 	const show = () => {
 		const colorTabularMaps = (pname, tmap) => {
 			for (const c of tmap.children) {
@@ -79,6 +83,8 @@ window.onload = async () => {
 					c.style.color = "black";
 				}
 			}
+			tmap.children[0].innerHTML = `<div style="color:#f00;background-color:#aaa">警報<br>${parseInt(sum.nwarn)}</div>`;
+			tmap.children[1].innerHTML = `<div style="color:#ff0;background-color:#aaa">注意報<br>${parseInt(sum.nnotice)}</div>`
 		};
 		const setCellContent = (c, pname, cname) => {
 			c.textContent = "";
@@ -109,8 +115,8 @@ body {
 	text-align: center;
 }
 h1 {
-	font-size: 3vw;
-	margin-top: 2vw;
+	font-size: 5vw;
+	margin: 1vw 0 .0vw 0;
 }
 /* tabularmaps */
 #tmapc span {
@@ -121,6 +127,9 @@ h1 {
 	border: .1vmax solid #333;
 	padding: .2vmax .2vmax;
 	margin: .2vmax;
+}
+#tmapc .val {
+	font-size: 90%;
 }
 /* other */
 #sel {
@@ -166,9 +175,9 @@ a {
 毎日更新「COVID-19 新型コロナウイルス対策ダッシュボード」もどうぞ</a>
 
 <div class="credit">
-DATA: <a href="https://www.jma.go.jp/jp/warn/">気象庁 Japan Meteorological Agency - 防災情報</a> → <a href=https://code4sabae.github.io/warnjp/data/latest.csv>CSV</a><br>
+DATA: <a href="https://www.jma.go.jp/jp/warn/">気象庁 Japan Meteorological Agency - 防災情報</a> → <a href=https://code4sabae.github.io/warnjp/data/latest.csv>CSV</a> (<a href=https://github.com/code4sabae/warnjp/>src on GitHub</a>)<br>
 LAYOUT: <a href="https://code4fukui.github.io/localgovjp/localgovjp-utf8.csv">TabularMaps Japan - 日本カラム地図 CSV</a> CC0 <a href=https://github.com/tabularmaps/hq>カラム地図 / TabularMaps on Github</a><br>
-APP: CC BY <a href="https://fukuno.jig.jp/" x="3089">@taisukef 福野泰介の一日一創</a><br>
+APP: CC BY <a href="https://fukuno.jig.jp/" x="3089">@taisukef 福野泰介の一日一創</a> (<a href=https://github.com/code4sabae/warnjp/>src on GitHub</a>)<br>
 </div>
 
 </body>
